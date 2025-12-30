@@ -20,16 +20,13 @@ const gifskiBin = isWin
 
 const rawArgs = process.argv.slice(2);
 let num = '5';
-
-// 1. Extract Number
 if (rawArgs.length > 0 && !rawArgs[0].startsWith('-')) {
     num = rawArgs[0];
-    rawArgs.shift(); // Remove num from args
+    rawArgs.shift();
 }
 
-const gifskiFlags: string[] = [...rawArgs];
+const gifskiFlags: string[] = rawArgs;
 
-// Set defaults ONLY if user didn't provide them
 if (!gifskiFlags.some(a => a === '-Q' || a === '--quality')) gifskiFlags.push('--quality', '100');
 if (!gifskiFlags.some(a => a === '-r' || a === '--fps')) gifskiFlags.push('--fps', '25');
 if (!gifskiFlags.some(a => a === '-W' || a === '--width')) gifskiFlags.push('--width', WIDTH.toString());
