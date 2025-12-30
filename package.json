@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node generate.ts",
+    "avatar": "ts-node avatar.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,6 +15,7 @@
     "@types/fluent-ffmpeg": "^2.1.28",
     "@types/node": "^25.0.3",
     "canvas": "^3.2.0",
+    "ffmpeg-static": "^5.3.0",
     "gifski": "^1.7.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
